@@ -597,7 +597,7 @@ export const cacAccountingSupplierParty: Transformation[] = [
 		type: 'string',
 		src: ['cac:PartyName', 'cbc:Name'],
 		dest: ['ram:SpecifiedLegalOrganization', 'ram:TradingBusinessName'],
-		fxProfileMask: FX_MASK_BASIC_WL,
+		fxProfileMask: FX_MASK_EN16931,
 	},
 	{
 		type: 'string',
@@ -688,7 +688,7 @@ export const cacAccountingCustomerParty: Transformation[] = [
 		type: 'string',
 		src: ['cac:PartyName', 'cbc:Name'],
 		dest: ['ram:SpecifiedLegalOrganization', 'ram:TradingBusinessName'],
-		fxProfileMask: FX_MASK_BASIC_WL,
+		fxProfileMask: FX_MASK_EN16931,
 	},
 	{
 		type: 'object',
@@ -763,6 +763,30 @@ export const cacAdditionalDocumentReference: Transformation[] = [
 	},
 ];
 
+export const cacDelivery: Transformation[] = [
+	{
+		type: 'string',
+		subtype: 'DateTimeString',
+		src: ['cbc:ActualDeliveryDate'],
+		dest: [
+			'ram:ActualDeliverySupplyChainEvent',
+			'ram:OccurrenceDateTime',
+			'udt:DateTimeString',
+		],
+		fxProfileMask: FX_MASK_BASIC_WL,
+	},
+	{
+		type: 'string',
+		src: ['cbc:ActualDeliveryDate', 'fixed:102'],
+		dest: [
+			'ram:ActualDeliverySupplyChainEvent',
+			'ram:OccurrenceDateTime',
+			'udt:DateTimeString@format',
+		],
+		fxProfileMask: FX_MASK_MINIMUM,
+	},
+];
+
 export const deliveryAddress: Transformation[] = [
 	{
 		type: 'string',
@@ -805,26 +829,6 @@ export const deliveryAddress: Transformation[] = [
 		src: ['cbc:CountrySubentity'],
 		dest: ['ram:CountrySubDivisionName'],
 		fxProfileMask: FX_MASK_BASIC_WL,
-	},
-	{
-		type: 'string',
-		src: ['cac:Delivery', 'cbc:ActualDeliveryDate'],
-		dest: [
-			'ram:ActualDeliverySupplyChainEvent',
-			'ram:OccurrenceDateTime',
-			'udt:DateTimeString',
-		],
-		fxProfileMask: FX_MASK_BASIC_WL,
-	},
-	{
-		type: 'string',
-		src: ['cac:Delivery', 'cbc:ActualDeliveryDate', 'fixed:102'],
-		dest: [
-			'ram:ActualDeliverySupplyChainEvent',
-			'ram:OccurrenceDateTime',
-			'udt:DateTimeString@format',
-		],
-		fxProfileMask: FX_MASK_MINIMUM,
 	},
 	{
 		type: 'string',
@@ -1313,9 +1317,9 @@ export const ublInvoice: Transformation = {
 				},
 				{
 					type: 'object',
-					src: [],
+					src: ['cac:Delivery'],
 					dest: ['ram:ApplicableHeaderTradeDelivery'],
-					children: [],
+					children: cacDelivery,
 					fxProfileMask: FX_MASK_MINIMUM,
 				},
 				// FIXME! This is an array for CII.

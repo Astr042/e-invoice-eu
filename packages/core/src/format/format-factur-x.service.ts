@@ -518,23 +518,14 @@ export class FormatFacturXService
 	}
 
 	private addFacturXStuff(node: XMLBuilder, invoiceMeta: InvoiceMeta) {
-		node
-			.ele('rdf:Description', {
-				'xmlns:fx': 'urn:factur-x:pdfa:CrossIndustryDocument:invoice:1p0#',
-				'rdf:about': '',
-			})
-			.ele('fx:DocumentType')
-			.txt('INVOICE')
-			.up()
-			.ele('fx:DocumentFileName')
-			.txt(invoiceMeta.filename)
-			.up()
-			.ele('fx:Version')
-			.txt(invoiceMeta.version)
-			.up()
-			.ele('fx:ConformanceLevel')
-			.txt(invoiceMeta.conformanceLevel)
-			.up();
+		node.ele('rdf:Description', {
+			'xmlns:fx': 'urn:factur-x:pdfa:CrossIndustryDocument:invoice:1p0#',
+			'rdf:about': '',
+			'fx:DocumentType': 'INVOICE',
+			'fx:DocumentFileName': invoiceMeta.filename,
+			'fx:Version': invoiceMeta.version,
+			'fx:ConformanceLevel': invoiceMeta.conformanceLevel,
+		});
 	}
 
 	private formatDateWithOffset(date: Date): string {
@@ -579,7 +570,7 @@ export class FormatFacturXService
 				{
 					filename,
 					buffer: new TextEncoder().encode(xml),
-					mimetype: 'application/xml',
+					mimetype: 'text/xml',
 					description: 'Factur-X',
 				},
 				AFRelationship.Alternative,

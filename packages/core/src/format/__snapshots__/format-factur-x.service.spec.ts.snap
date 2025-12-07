@@ -70,12 +70,7 @@ exports[`FormatFacturXService XMP metadata should add XMP metadata for Factur-X-
 				</rdf:Bag>
 			</pdfaExtension:schemas>
 		</rdf:Description>
-		<rdf:Description xmlns:fx="urn:factur-x:pdfa:CrossIndustryDocument:invoice:1p0#" rdf:about="">
-			<fx:DocumentType>INVOICE</fx:DocumentType>
-			<fx:DocumentFileName>factur-x.xml</fx:DocumentFileName>
-			<fx:Version>1.0</fx:Version>
-			<fx:ConformanceLevel>BASIC</fx:ConformanceLevel>
-		</rdf:Description>
+		<rdf:Description xmlns:fx="urn:factur-x:pdfa:CrossIndustryDocument:invoice:1p0#" rdf:about="" fx:DocumentType="INVOICE" fx:DocumentFileName="factur-x.xml" fx:Version="1.0" fx:ConformanceLevel="BASIC"/>
 	</rdf:RDF>
 </x:xmpmeta>
 <?xpacket end="w"?>"
@@ -151,12 +146,7 @@ exports[`FormatFacturXService XMP metadata should add XMP metadata for Factur-X-
 				</rdf:Bag>
 			</pdfaExtension:schemas>
 		</rdf:Description>
-		<rdf:Description xmlns:fx="urn:factur-x:pdfa:CrossIndustryDocument:invoice:1p0#" rdf:about="">
-			<fx:DocumentType>INVOICE</fx:DocumentType>
-			<fx:DocumentFileName>factur-x.xml</fx:DocumentFileName>
-			<fx:Version>1.0</fx:Version>
-			<fx:ConformanceLevel>BASIC WL</fx:ConformanceLevel>
-		</rdf:Description>
+		<rdf:Description xmlns:fx="urn:factur-x:pdfa:CrossIndustryDocument:invoice:1p0#" rdf:about="" fx:DocumentType="INVOICE" fx:DocumentFileName="factur-x.xml" fx:Version="1.0" fx:ConformanceLevel="BASIC WL"/>
 	</rdf:RDF>
 </x:xmpmeta>
 <?xpacket end="w"?>"
@@ -232,12 +222,7 @@ exports[`FormatFacturXService XMP metadata should add XMP metadata for Factur-X-
 				</rdf:Bag>
 			</pdfaExtension:schemas>
 		</rdf:Description>
-		<rdf:Description xmlns:fx="urn:factur-x:pdfa:CrossIndustryDocument:invoice:1p0#" rdf:about="">
-			<fx:DocumentType>INVOICE</fx:DocumentType>
-			<fx:DocumentFileName>factur-x.xml</fx:DocumentFileName>
-			<fx:Version>1.0</fx:Version>
-			<fx:ConformanceLevel>EN 16931</fx:ConformanceLevel>
-		</rdf:Description>
+		<rdf:Description xmlns:fx="urn:factur-x:pdfa:CrossIndustryDocument:invoice:1p0#" rdf:about="" fx:DocumentType="INVOICE" fx:DocumentFileName="factur-x.xml" fx:Version="1.0" fx:ConformanceLevel="EN 16931"/>
 	</rdf:RDF>
 </x:xmpmeta>
 <?xpacket end="w"?>"
@@ -313,12 +298,7 @@ exports[`FormatFacturXService XMP metadata should add XMP metadata for Factur-X-
 				</rdf:Bag>
 			</pdfaExtension:schemas>
 		</rdf:Description>
-		<rdf:Description xmlns:fx="urn:factur-x:pdfa:CrossIndustryDocument:invoice:1p0#" rdf:about="">
-			<fx:DocumentType>INVOICE</fx:DocumentType>
-			<fx:DocumentFileName>factur-x.xml</fx:DocumentFileName>
-			<fx:Version>1.0</fx:Version>
-			<fx:ConformanceLevel>EXTENDED</fx:ConformanceLevel>
-		</rdf:Description>
+		<rdf:Description xmlns:fx="urn:factur-x:pdfa:CrossIndustryDocument:invoice:1p0#" rdf:about="" fx:DocumentType="INVOICE" fx:DocumentFileName="factur-x.xml" fx:Version="1.0" fx:ConformanceLevel="EXTENDED"/>
 	</rdf:RDF>
 </x:xmpmeta>
 <?xpacket end="w"?>"
@@ -394,12 +374,7 @@ exports[`FormatFacturXService XMP metadata should add XMP metadata for Factur-X-
 				</rdf:Bag>
 			</pdfaExtension:schemas>
 		</rdf:Description>
-		<rdf:Description xmlns:fx="urn:factur-x:pdfa:CrossIndustryDocument:invoice:1p0#" rdf:about="">
-			<fx:DocumentType>INVOICE</fx:DocumentType>
-			<fx:DocumentFileName>factur-x.xml</fx:DocumentFileName>
-			<fx:Version>1.0</fx:Version>
-			<fx:ConformanceLevel>MINIMUM</fx:ConformanceLevel>
-		</rdf:Description>
+		<rdf:Description xmlns:fx="urn:factur-x:pdfa:CrossIndustryDocument:invoice:1p0#" rdf:about="" fx:DocumentType="INVOICE" fx:DocumentFileName="factur-x.xml" fx:Version="1.0" fx:ConformanceLevel="MINIMUM"/>
 	</rdf:RDF>
 </x:xmpmeta>
 <?xpacket end="w"?>"
@@ -475,12 +450,7 @@ exports[`FormatFacturXService XMP metadata should add XMP metadata for Factur-X-
 				</rdf:Bag>
 			</pdfaExtension:schemas>
 		</rdf:Description>
-		<rdf:Description xmlns:fx="urn:factur-x:pdfa:CrossIndustryDocument:invoice:1p0#" rdf:about="">
-			<fx:DocumentType>INVOICE</fx:DocumentType>
-			<fx:DocumentFileName>xrechnung.xml</fx:DocumentFileName>
-			<fx:Version>3.0</fx:Version>
-			<fx:ConformanceLevel>XRECHNUNG</fx:ConformanceLevel>
-		</rdf:Description>
+		<rdf:Description xmlns:fx="urn:factur-x:pdfa:CrossIndustryDocument:invoice:1p0#" rdf:about="" fx:DocumentType="INVOICE" fx:DocumentFileName="xrechnung.xml" fx:Version="3.0" fx:ConformanceLevel="XRECHNUNG"/>
 	</rdf:RDF>
 </x:xmpmeta>
 <?xpacket end="w"?>"
@@ -556,12 +526,7 @@ exports[`FormatFacturXService XMP metadata should work in western timezones 1`] 
 				</rdf:Bag>
 			</pdfaExtension:schemas>
 		</rdf:Description>
-		<rdf:Description xmlns:fx="urn:factur-x:pdfa:CrossIndustryDocument:invoice:1p0#" rdf:about="">
-			<fx:DocumentType>INVOICE</fx:DocumentType>
-			<fx:DocumentFileName>factur-x.xml</fx:DocumentFileName>
-			<fx:Version>1.0</fx:Version>
-			<fx:ConformanceLevel>EXTENDED</fx:ConformanceLevel>
-		</rdf:Description>
+		<rdf:Description xmlns:fx="urn:factur-x:pdfa:CrossIndustryDocument:invoice:1p0#" rdf:about="" fx:DocumentType="INVOICE" fx:DocumentFileName="factur-x.xml" fx:Version="1.0" fx:ConformanceLevel="EXTENDED"/>
 	</rdf:RDF>
 </x:xmpmeta>
 <?xpacket end="w"?>"
