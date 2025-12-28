@@ -1599,6 +1599,20 @@ export class FormatCIIService
 
 		this.convert(invoice, '$', cii, '$', [ublInvoice]);
 
+		// JSONPath has issues with # character in values, so use global variable
+		// passed from backend to bypass JSONPath processing
+		const globalCustomizationID = (global as any)?.__XRECHNUNG_CUSTOMIZATION_ID;
+
+		if (globalCustomizationID && typeof globalCustomizationID === 'string') {
+			const contextPath =
+				'$.rsm:CrossIndustryInvoice.rsm:ExchangedDocumentContext.ram:GuidelineSpecifiedDocumentContextParameter.ram:ID';
+			this.vivifyDest(cii, contextPath, globalCustomizationID);
+			// Clean up global
+			delete (global as any).__XRECHNUNG_CUSTOMIZATION_ID;
+		}
+		// Note: We don't apply a default CustomizationID anymore to avoid changing
+		// the output when no CustomizationID is provided in the input
+
 		cii['rsm:CrossIndustryInvoice@xmlns:xsi'] =
 			'http://www.w3.org/2001/XMLSchema-instance';
 		cii['rsm:CrossIndustryInvoice@xsi:schemaLocation'] =
